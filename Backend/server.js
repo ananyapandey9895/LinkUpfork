@@ -20,7 +20,7 @@ const io = new Server(server, {
 
 app.use(cors({
   origin: "https://link-upfork-one.vercel.app",
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST" , "OPTIONS"],
   credentials: true
 }));
 app.use(express.json());
