@@ -26,7 +26,7 @@ export default function BioGenerator() {
       const prompt = `Write a single, concise, professional LinkedIn bio in 50 words or fewer. Do not provide multiple options. Use clear, simple language. Here is the user info: ${userInput}`;
 
 
-      const response = await fetch('http://localhost:4000/generate', {
+      const response = await fetch('https://linkupfork-backend.onrender.com/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt }),
