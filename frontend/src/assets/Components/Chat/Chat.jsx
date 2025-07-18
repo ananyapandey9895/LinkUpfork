@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import './Chat.css'
-const socket = io('https://linkupfork-backend.onrender.com');
+const socket = io('https://linkupfork-backend.onrender.com', {
+  withCredentials: true,
+  transports: ['websocket', 'polling', 'flashsocket'],
+
+})
+
 
 function Chat() {
   const [username, setUsername] = useState('');
